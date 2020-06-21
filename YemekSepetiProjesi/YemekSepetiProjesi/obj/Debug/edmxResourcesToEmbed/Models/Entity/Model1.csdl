@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="YemekSepetiDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TBLKategoriler">
+    <Key>
+      <PropertyRef Name="KategoriId" />
+    </Key>
+    <Property Name="KategoriId" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KategoriAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TBLYemekler" Relationship="Self.FK_TBLYemekler_TBLKategoriler" FromRole="TBLKategoriler" ToRole="TBLYemekler" />
+  </EntityType>
+  <EntityType Name="TBLMusteriler">
+    <Key>
+      <PropertyRef Name="MusteriId" />
+    </Key>
+    <Property Name="MusteriId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MusteriAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MusteriSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TBLSatislar" Relationship="Self.FK_TBLSatislar_TBLMusteriler" FromRole="TBLMusteriler" ToRole="TBLSatislar" />
+  </EntityType>
+  <EntityType Name="TBLSatislar">
+    <Key>
+      <PropertyRef Name="SatisId" />
+    </Key>
+    <Property Name="SatisId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Urun" Type="Int32" />
+    <Property Name="Musteri" Type="Int32" />
+    <Property Name="Adet" Type="Byte" />
+    <Property Name="Fiyat" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="TBLMusteriler" Relationship="Self.FK_TBLSatislar_TBLMusteriler" FromRole="TBLSatislar" ToRole="TBLMusteriler" />
+    <NavigationProperty Name="TBLYemekler" Relationship="Self.FK_TBLSatislar_TBLYemekler" FromRole="TBLSatislar" ToRole="TBLYemekler" />
+  </EntityType>
+  <EntityType Name="TBLYemekler">
+    <Key>
+      <PropertyRef Name="YemekID" />
+    </Key>
+    <Property Name="YemekID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="YemekAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="YemekKategori" Type="Int16" />
+    <Property Name="YemekFiyat" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Stok" Type="Byte" />
+    <NavigationProperty Name="TBLKategoriler" Relationship="Self.FK_TBLYemekler_TBLKategoriler" FromRole="TBLYemekler" ToRole="TBLKategoriler" />
+    <NavigationProperty Name="TBLSatislar" Relationship="Self.FK_TBLSatislar_TBLYemekler" FromRole="TBLYemekler" ToRole="TBLSatislar" />
+    <Property Name="ImageURL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_TBLYemekler_TBLKategoriler">
+    <End Role="TBLKategoriler" Type="Self.TBLKategoriler" Multiplicity="0..1" />
+    <End Role="TBLYemekler" Type="Self.TBLYemekler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLKategoriler">
+        <PropertyRef Name="KategoriId" />
+      </Principal>
+      <Dependent Role="TBLYemekler">
+        <PropertyRef Name="YemekKategori" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLSatislar_TBLMusteriler">
+    <End Role="TBLMusteriler" Type="Self.TBLMusteriler" Multiplicity="0..1" />
+    <End Role="TBLSatislar" Type="Self.TBLSatislar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLMusteriler">
+        <PropertyRef Name="MusteriId" />
+      </Principal>
+      <Dependent Role="TBLSatislar">
+        <PropertyRef Name="Musteri" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLSatislar_TBLYemekler">
+    <End Role="TBLYemekler" Type="Self.TBLYemekler" Multiplicity="0..1" />
+    <End Role="TBLSatislar" Type="Self.TBLSatislar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLYemekler">
+        <PropertyRef Name="YemekID" />
+      </Principal>
+      <Dependent Role="TBLSatislar">
+        <PropertyRef Name="Urun" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="YemekSepetiDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="TBLKategoriler" EntityType="Self.TBLKategoriler" />
+    <EntitySet Name="TBLMusteriler" EntityType="Self.TBLMusteriler" />
+    <EntitySet Name="TBLSatislar" EntityType="Self.TBLSatislar" />
+    <EntitySet Name="TBLYemekler" EntityType="Self.TBLYemekler" />
+    <AssociationSet Name="FK_TBLYemekler_TBLKategoriler" Association="Self.FK_TBLYemekler_TBLKategoriler">
+      <End Role="TBLKategoriler" EntitySet="TBLKategoriler" />
+      <End Role="TBLYemekler" EntitySet="TBLYemekler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLSatislar_TBLMusteriler" Association="Self.FK_TBLSatislar_TBLMusteriler">
+      <End Role="TBLMusteriler" EntitySet="TBLMusteriler" />
+      <End Role="TBLSatislar" EntitySet="TBLSatislar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLSatislar_TBLYemekler" Association="Self.FK_TBLSatislar_TBLYemekler">
+      <End Role="TBLYemekler" EntitySet="TBLYemekler" />
+      <End Role="TBLSatislar" EntitySet="TBLSatislar" />
+    </AssociationSet>
+    <EntitySet Name="TBLKullanicilar" EntityType="YemekSepetiDBModel.TBLKullanicilar" />
+  </EntityContainer>
+  <EntityType Name="TBLKullanicilar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Rol" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

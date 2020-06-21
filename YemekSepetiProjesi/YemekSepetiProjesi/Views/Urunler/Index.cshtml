@@ -1,0 +1,56 @@
+﻿@using YemekSepetiProjesi.Models.Entity
+@model List<TBLYemekler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<style>
+    .tr, td, th {
+        text-align: center;
+    }
+</style>
+    <a href="/urunler/YeniUrun" class="btn btn-success" style="margin-top:25px;margin-bottom:20px;margin-left:20px">Yeni Ürün Ekle</a><br /><br />
+    <table id="urunTablo" class="table table-bordered" style="text-align:center">
+        <thead>
+            <tr>
+                <th> Yemek ID</th>
+                <th> Yemek Resim</th>
+                <th> Yemek Adı</th>
+                <th> Yemek Kategori</th>
+                <th> Yemek Fiyat</th>
+                <th> Yemek Stok</th>
+                <th>SİL</th>
+                <th>GÜNCELLE</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var urunler in Model)
+            {
+                <tr>
+                    <th>@urunler.YemekID</th>
+                    <td><img width="75" height="75" src="@Url.Content("~/Images/"+ @urunler.ImageURL)"> </td>
+                    <td>@urunler.YemekAdi</td>
+                    <td>@urunler.TBLKategoriler.KategoriAdi</td>
+                    <td>@urunler.YemekFiyat ₺</td>
+                    <td>@urunler.Stok</td>
+                    <td><a href="/urunler/Sil/@urunler.YemekID" class="btn btn-danger">Sil</a></td>
+                    <td><a href="/urunler/UrunGetir/@urunler.YemekID" class="btn btn-success">Güncelle</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+    <link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+
+    <script>
+        $('#urunTablo').dataTable({});
+    </script>
+    <link href="~/Content/DataTables/css/dataTables.bootstrap4.css" rel="stylesheet" />
+

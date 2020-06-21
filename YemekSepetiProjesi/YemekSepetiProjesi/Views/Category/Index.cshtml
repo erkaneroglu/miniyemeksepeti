@@ -1,0 +1,54 @@
+﻿@using YemekSepetiProjesi.Models.Entity;
+@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.IPagedList<TBLKategoriler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    .tr, td, th {
+        text-align: center;
+    }
+</style>
+<a href="/category/YeniKategori" class="btn btn-success" style="margin-top:25px;margin-bottom:40px;margin-left:20px">Yeni Kategori Ekle</a>
+<table id="kategoriTablo" class="table table-bordered" style="text-align:center">
+    <thead>
+        <tr>
+            <th>Kategori ID</th>
+            <th>Kategori Adı</th>
+            <th>SİL</th>
+            <th>GÜNCELLE</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ktgr in Model)
+        {
+            <tr>
+                <th>
+                    @ktgr.KategoriId
+                </th>
+                <td>
+                    @ktgr.KategoriAdi
+                </td>
+                <td><a href="/category/Sil/@ktgr.KategoriId" class="btn btn-danger ">Sil</a></td>
+                <td><a href="/category/KategoriGetir/@ktgr.KategoriId" class="btn btn-success">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.PagedListPager((IPagedList)Model, sayfa => Url.Action("Index", new { sayfa }))
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+
+<script>
+    $('#kategoriTablo').dataTable({});
+</script>
+

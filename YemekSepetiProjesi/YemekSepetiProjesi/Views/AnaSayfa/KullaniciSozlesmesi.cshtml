@@ -1,0 +1,140 @@
+﻿@{
+    ViewBag.Title = "KullaniciSozlesmesi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap E-commerce Templates</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <!--[if ie]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
+    <!-- bootstrap -->
+    <link href="~/homepage-css/asd/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/homepage-css/asd/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+    <link href="~/homepage-css/asd/themes/css/bootstrappage.css" rel="stylesheet" />
+
+    <!-- global styles -->
+    <link href="~/homepage-css/asd/themes/css/flexslider.css" rel="stylesheet" />
+    <link href="~/homepage-css/asd/themes/css/main.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- scripts -->
+    <script src="~/homepage-css/asd/themes/js/jquery-1.7.2.min.js"></script>
+    <script src="~/homepage-css/asd/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/homepage-css/asd/themes/js/superfish.js"></script>
+    <script src="~/homepage-css/asd/themes/js/jquery.scrolltotop.js"></script>
+    <style>
+        a:hover {
+            text-decoration: none;
+            color: #ff6a00;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/AnaSayfa/Index"><img src="~/Images/yemeklogo.png" style="margin-bottom:-30px;" class="center" /></a>
+    <div id="top-bar" class="container">
+        <div class="row">
+            <div class="center">
+                <ul class="user-menu">
+                    <li><a href="~/AnaSayfa/Index/">Anasayfa</a></li>
+                    <li><a href="~/AnaSayfa/SikSorulanSorular/">S.S.S</a></li>
+                    <li><a href="~/AnaSayfa/Iletisim/">İletişim</a></li>
+                    <li><a href="~/AnaSayfa/KullaniciSozlesmesi/">Kullanıcı Sözleşmesi</a></li>
+                    <li><a><b> @User.Identity.Name </b></a></li>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li><a href="/Dashboard/Index/">Admin Paneli</a></li>
+                    }
+                    <li><a href="/Login/Logout/">Çıkış Yap</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section class="py-5"></section>
+    <div id="wrapper" class="container" style="margin-top:-40px">
+        <section class="main-content">
+            <div class="active item" style="margin-left:75px;margin-top:50px;padding:30px">
+                <div style="text-align:center;font-weight:bold"><h4>Kullanıcı Sözleşmesi</h4></div>
+            </div>
+            <div style="margin:40px">
+                <span><b>1. Sözleşmenin Onaylanması</b></span><p></p>
+                <span style="padding:40px">
+                    Kullanıcı kayıt formu doldurularak veya sosyal medya ağları üyeliği (Facebook, Twitter, Pinterest ve benzerleri) aracılığıyla www.yemeksepeti.com adresinden veya bu adres üzerinden erişilebilen web-sitelerini kapsayan siteler üzerinden Yemeksepeti.com sistemine üye olunabilir. Her Yemeksepeti.com kullanıcısı, Yemek Sepeti Elektronik İletişim Tanıtım Pazarlama Gıda Sanayi ve Ticaret Anonim Şirketi (“Yemeksepeti.com”) ile akdetmiş olduğu işbu Kullanıcı Sözleşmesi (“Sözleşme”) hükümlerine uyacağını kabul ve taahhüt eder.
+                </span>
+            </div>
+            <div style="margin:40px">
+                <span><b>2. Hizmetler</b></span><p></p>
+                <span style="padding:40px">
+                    Yemeksepeti.com kullanıcılarına internet ortamında, mobil telefonlarda, akıllı TV sistemlerinde veya benzer platformlarda geliştirilebilen uygulamalardan sisteme üye işyerlerinden yemek siparişi verme imkanı ve buna ilişkin sair hizmetler sunar.
+                </span>
+            </div>
+            <div style="margin:40px">
+                <span><b>3. Yemeksepeti.com Kullanıcı Sistemi</b></span><p></p>
+                <span style="padding:40px">
+                    Her Yemeksepeti.com kullanıcısı, kendisinin belirleyeceği bir “kullanıcı adı” veya e-posta adresi ile “şifre”ye sahip olur.
+                    “Kullanıcı adı” e-posta adreslerinde olduğu gibi her üyeye özeldir ve aynı kullanıcı adı farklı üyelere verilmez.
+                    Her kullanıcının Yemeksepeti.com üyeliği gerektiren sistemlere bağlanabilmesi için kullanıcı adını veya kayıtlı e-posta adresi ile şifresini girmesi gereklidir. Bu işlem Yemeksepeti.com sistemine giriş yapmak şeklinde tanımlanmıştır. Kullanıcılar, diledikleri takdirde ilgili kullanıcı sözleşmelerini onaylamak kaydıyla Yemeksepeti.com sistemine giriş yaptıkları kullanıcı adı veya e-posta adresi ve şifre ile Yemeksepeti.com sistemine dahil diğer sitelere (Papyon.com gibi) de giriş yapabilirler.
+                    “Şifre” sadece ilgili kullanıcının bilgisi dâhilindedir. Kullanıcı şifresi unutulduğu takdirde Yemeksepeti.com, talep üzerine kullanıcının Yemeksepeti.com sisteminde kayıtlı e-posta adresine yeni şifre oluşturabilmek için bir bağlantı gönderecektir. Şifre'nin belirlenmesi ve korunması tamamıyla kullanıcının kendi sorumluluğundadır ve Yemeksepeti.com şifre kullanımından doğacak problemlerden veya oluşabilecek zararlardan kesinlikle sorumlu değildir.
+                </span>
+            </div>
+            <div style="margin:40px">
+                <span><b>4. Kullanıcının Yükümlülükleri</b></span><p></p>
+                <span style="padding:40px">
+                    Kullanıcı, Yemeksepeti.com hizmetlerinden yararlandığı sırada,
+                    Kullanıcı kayıt formunda yer alan bilgilerin doğru olduğunu ve ve Yemeksepeti.com’da oluşturulmuş her bir Kullanıcı adı için yalnızca bir adet e-posta tanımlanabileceğini, tanımlanan e-posta adresinin değiştirilemeyeceğini , yeni bir e-posta adresinin ancak Yemeksepeti.com üzerinde yeni bir kullanıcı oluşturulması halinde tanımlanılabileceğini; bu bilgilerin gerekli olduğu durumlarda bilginin hatalı veya noksan olmasından (şifre unutma gibi) doğacak kendisinin ya da üçüncü kişilerin zararlarından dolayı sorumluluğun kendisine ait olduğunu, bu hallerde Yemeksepeti.com üyeliğinin sona erebileceğini;
+                    “Kullanıcı adı” veya kayıtlı e-posta adresiyle yapacağı her türlü işlemden bizzat kendisinin sorumlu olduğunu;
+                    Yemeksepeti.com tarafından verilen hizmetlerin ve yazılımların telif hakkının Yemeksepeti.com'a ait olduğunu, bu yazılımları hiçbir şekilde çoğaltıp, dağıtmayacağını;
+                    Yemeksepeti.com hizmetlerini kullandığında ileri sürdüğü şahsi fikir, düşünce, ifade, Yemeksepeti.com ortamına eklediği dosyaların, gönderdiği kişisel bilgilerinin sorumluluğunun kendisine ait olduğunu ve üye işyeri ile kullanıcı arasında oluşabilecek ihtilaflar dahil ancak bunlarla sınırlı olmamak üzere Yemeksepeti.com'un bu dosyalardan dolayı hiçbir şekilde sorumlu tutulamayacağını, Yemeksepeti.com’un bu görüş ve düşünceleri yayımlayıp, yayımlamamakta serbest olduğunu ayrıca bu görüş ve yorumları moderatörler aracılığıyla düzenleyip, imla hatalarını düzeltme hakkı bulunduğunu;
+                    Yemeksepeti.com tarafından sağlanan hizmetlerde bazı hallerde 18 yaşından büyüklere ait içeriğin yer alabileceğini, bu içeriğin usule aykırı şekilde görüntülenmesi sebebiyle Yemeksepeti.com'un sorumlu olmayacağını;
+                    Yemeksepeti.com servislerinin kullanımı sırasında kaybolacak ve/veya eksik alınacak, yanlış adrese iletilecek bilgi mesaj ve dosyalardan Yemeksepeti.com'un sorumlu olmayacağını;
+                    Yemeksepeti.com' da sunulan hizmetlere Yemeksepeti.com tarafından belirlenen şekil dışında ve/veya yetkisiz şekilde ulaşmamayı ve yazılımı hiçbir şekilde değiştirmemeyi, değiştirilmiş olduğu belli olanları kullanmamayı ve anılan kurallara uymadığı durumlarda Yemeksepeti.com'un uğrayabileceği tüm maddi ve manevi zararı karşılamayı;
+                    Tütün Mamulleri ve Alkollü İçkilerin Satışına ve Sunumuna İlişkin Usul ve Esaslar Hakkında Yönetmelik ve ilgili mevzuat uyarınca Yemeksepeti.com üzerinden tütün mamulleri ve alkollü içecek satışı kati suretle yapılmadığını, Yemeksepeti.com vasıtasıyla tütün mamulleri ve alkollü içecek temin etmemeyi ve üye işyerlerine bu konuda talepte bulunmamayı, aksi yöndeki işlemlerin üyeliğin iptali ve işbu Sözleşme’nin feshi ile sonuçlanabileceğini;
+                    Kullanıcı verilerinin yetkisiz kişilerce okunmasından veya kullanılmasından dolayı gelebilecek zararlardan ötürü Yemeksepeti.com'un sorumlu tututalamayacağını kabul eder.
+                </span>
+            </div>
+            <div style="margin:40px">
+                <span><b>5. Yemeksepeti.com'a Tanınan Yetkiler</b></span><p></p>
+                <span style="padding:40px">
+                    Yemeksepeti.com herhangi bir zamanda sistemin çalışmasını geçici bir süre askıya alabilir veya tamamen durdurabilir. Yemeksepeti.com güvenliği şüphesi doğuran kullanıcı işlemlerinden dolayı ilgili kullanıcıların Online Ödeme Yöntemi aracılığı ile ödeme yapma imkânını geçici bir süre askıya alabilir veya tamamen durdurabilir.Sistemin veya Online Ödeme Yöntemi kullanımının geçici bir süre askıya alınması veya tamamen durdurulmasından dolayı Yemeksepeti.com’un kullanıcılarına veya üçüncü kişilere karşı hiçbir sorumluluğu olmayacaktır.Kullanıcı adı veya e-posta ile şifre Yemeksepeti.com tarafından sunulan başvuru alanlarının doldurulmasından sonra görüntülenecek ve onaylanacaktır. Yemeksepeti.com kullanıcı kayıt formunu eksiksiz doldurmuş üyelerin veya Yemeksepeti.com sistemine giriş yapan kullanıcıların yeni bir şifreye sahip olmalarını veya şifrelerini kullanmalarını münhasıran süresiz olarak engelleyebilecektir.Yemeksepeti.com, hizmetlerinin zamanında, güvenli ve hatasız olarak sunulması, hizmet kullanımından elde edilen sonuçların doğru ve güvenilir olması, hizmet kalitesinin beklentilere cevap vermesi için gerekli özeni gösterecektir ancak bunları taahhüt etmemektedir.Yemeksepeti.com kullanıcıların sistemden yararlanmaları sırasında ortamda bulunduracakları dosyaların, mesajların bazılarını veya tamamını uygun göreceği periyotlarla yedekleme ve silme yetkisine sahiptir. Yedekleme ve silme işlemlerinden dolayı Yemeksepeti.com sorumlu tutulmayacaktır.Yemeksepeti.com kendi ürettiği ve/veya dışardan satın aldığı bilgi, belge, yazılım, tasarım, grafik vb. eserlerin mülkiyet ve mülkiyetten doğan telif haklarına sahiptir.Yemeksepeti.com sistemindeki satışlar, üye işyeri menülerinin sipariş anındaki mevcudiyetiyle sınırlıdır. Yemeksepeti.com ilgili üye işyerinde bulunmayan ürünlerin kullanıcıya teslimini sağlayamayabilir. Ürünlerin Yemeksepeti.com sisteminde teşhir edilmesi bunların stokta bulunduğu anlamına gelmemektedir.Yemeksepeti.com kullanıcılarının ürettiği ve yayınlanmak üzere kendi iradesiyle sisteme yüklediği (örneğin kullanıcı resimleri, panoya eklediği mesaj, şiir, haber, dosya gibi) bilgi, belge, yazılım, tasarım, grafik vb. eserlerin her türlü yazılı ve görsel mecrada yayınlanma, işleme, sosyal medya ağlarında paylaşma ve/veya Yemeksepeti.com sistemi içinde Yemeksepeti.com tarafından uygun görülecek başka bir adrese taşıma veya kendi takdirinde olmak üzere internet sitesinden kaldırma haklarına sahiptir. Yayınlanan bu bilgilerin başka kullanıcılar tarafından kopyalanması, işlenmesi ve/veya yayınlanması ihtimal dâhilindedir. Bu hallerde kullanıcı, Yemeksepeti.com'dan hiçbir telif ücreti talep etmeyecektir.
+                </span>
+            </div>
+        </section>
+        <section id="copyright">
+            <span>Erkan Eroğlu 18701804 - Tüm hakları saklıdır.</span>
+        </section>
+    </div>
+    <script src="~/homepage-css/asd/themes/js/common.js"></script>
+    <script src="~/homepage-css/asd/themes/js/jquery.flexslider-min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(document).ready(function () {
+                $('.flexslider').flexslider({
+                    animation: "fade",
+                    slideshowSpeed: 4000,
+                    animationSpeed: 600,
+                    controlNav: false,
+                    directionNav: true,
+                    controlsContainer: ".flex-container" // the container that holds the flexslider
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+

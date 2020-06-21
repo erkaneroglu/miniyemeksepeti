@@ -1,0 +1,24 @@
+﻿@model YemekSepetiProjesi.Models.Entity.TBLKategoriler
+@{
+    ViewBag.Title = "KategoriGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+    
+@using (Html.BeginForm("Guncelle", "Category", FormMethod.Post))
+{
+    <div class="form-group" style="width:80%; margin:auto; margin-top:100px">
+        @Html.LabelFor(m => m.KategoriId)
+        @Html.TextBoxFor(m => m.KategoriId, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.KategoriAdi)
+        @Html.TextBoxFor(m => m.KategoriAdi, new { @class = "form-control" })
+    </div>
+    <div style="width:80%; margin:auto; margin-top:20px">
+        <button class="btn btn-danger">Güncelle</button>
+    </div>
+}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+

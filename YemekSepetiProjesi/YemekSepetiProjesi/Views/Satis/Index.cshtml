@@ -1,0 +1,22 @@
+﻿@model YemekSepetiProjesi.Models.Entity.TBLSatislar
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+    <form method="post" action="/Satis/YeniSatis" style="width:80%; margin:auto; margin-top:100px">
+    <div class="modal-body">
+        <label>Yemek Adı</label>
+        @Html.TextBoxFor(m => m.Urun, new { @class = "form-control" })
+        <label>Müşteri Adı</label>
+        @Html.TextBoxFor(m => m.Musteri, new { @class = "form-control" })
+        <label>Sipariş Adeti</label>
+        @Html.TextBoxFor(m => m.Adet, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-info" type="submit">Satış Yap</button>
+        <a href="/SatisGecmisi/Index" class="btn btn-success">Satış Geçmişini Görüntüle</a>
+    </div>
+    
+</form>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+

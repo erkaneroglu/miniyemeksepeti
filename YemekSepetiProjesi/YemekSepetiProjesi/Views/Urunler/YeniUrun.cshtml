@@ -1,0 +1,30 @@
+﻿@model YemekSepetiProjesi.Models.Entity.TBLYemekler
+@{
+    ViewBag.Title = "YeniUrun";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post" class="form-group" style="width:80%; margin:auto; margin-top:100px">
+    <div>
+        <label>Yemek Adı</label>
+        <input type="text" class="form-control" name="YemekAdi" placeholder="Yemek Adı Gir.." required="" />
+    </div>
+    <div>
+        <label>Yemek Kategori</label>
+        @Html.DropDownListFor(m => m.TBLKategoriler.KategoriId, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+    </div>
+    <div>
+        <label>Yemek Fiyat</label>
+        <input type="text" class="form-control" name="YemekFiyat" placeholder="Yemek Fiyatı Gir.." required="" />
+    </div>
+    <div>
+        <label>Yemek Stok</label>
+        <input type="text" class="form-control" name="Stok" placeholder="Yemek Stoğu Belirle" required="" />
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-success">Yemek Ekle</button>
+    </div>
+</form>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />

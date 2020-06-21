@@ -1,0 +1,31 @@
+﻿@model YemekSepetiProjesi.Models.Entity.TBLYemekler
+@{
+    ViewBag.Title = "UrunGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+    
+@using (Html.BeginForm("Guncelle", "Urunler", FormMethod.Post))
+{
+    <div class="form-group" style="width:80%; margin:auto; margin-top:100px">
+        @Html.LabelFor(m => m.YemekID)
+        @Html.TextBoxFor(m => m.YemekID, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.YemekAdi)
+        @Html.TextBoxFor(m => m.YemekAdi, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.YemekKategori)
+        @Html.DropDownListFor(m => m.TBLKategoriler.KategoriId, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+        @*@Html.TextBoxFor(m => m.YemekKategori, new { @class = "form-control" })*@
+        <br />
+        @Html.LabelFor(m => m.YemekFiyat)
+        @Html.TextBoxFor(m => m.YemekFiyat, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.Stok)
+        @Html.TextBoxFor(m => m.Stok, new { @class = "form-control" })
+    </div>
+    <div style="width:80%; margin:auto; margin-top:20px">
+        <button class="btn btn-warning">Güncelle</button>
+    </div>
+}
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />

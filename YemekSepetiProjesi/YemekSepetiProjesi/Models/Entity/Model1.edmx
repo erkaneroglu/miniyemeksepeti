@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="YemekSepetiDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TBLKategoriler">
+          <Key>
+            <PropertyRef Name="KategoriId" />
+          </Key>
+          <Property Name="KategoriId" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KategoriAdi" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TBLKullanicilar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KullaniciAdi" Type="varchar" MaxLength="50" />
+          <Property Name="Sifre" Type="varchar" MaxLength="50" />
+          <Property Name="Rol" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TBLMusteriler">
+          <Key>
+            <PropertyRef Name="MusteriId" />
+          </Key>
+          <Property Name="MusteriId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MusteriAdi" Type="varchar" MaxLength="50" />
+          <Property Name="MusteriSoyad" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TBLSatislar">
+          <Key>
+            <PropertyRef Name="SatisId" />
+          </Key>
+          <Property Name="SatisId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Urun" Type="int" />
+          <Property Name="Musteri" Type="int" />
+          <Property Name="Adet" Type="tinyint" />
+          <Property Name="Fiyat" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="TBLYemekler">
+          <Key>
+            <PropertyRef Name="YemekID" />
+          </Key>
+          <Property Name="YemekID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="YemekAdi" Type="varchar" MaxLength="50" />
+          <Property Name="YemekKategori" Type="smallint" />
+          <Property Name="YemekFiyat" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Stok" Type="tinyint" />
+          <Property Name="ImageURL" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_TBLSatislar_TBLMusteriler">
+          <End Role="TBLMusteriler" Type="Self.TBLMusteriler" Multiplicity="0..1" />
+          <End Role="TBLSatislar" Type="Self.TBLSatislar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLMusteriler">
+              <PropertyRef Name="MusteriId" />
+            </Principal>
+            <Dependent Role="TBLSatislar">
+              <PropertyRef Name="Musteri" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLSatislar_TBLYemekler">
+          <End Role="TBLYemekler" Type="Self.TBLYemekler" Multiplicity="0..1" />
+          <End Role="TBLSatislar" Type="Self.TBLSatislar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLYemekler">
+              <PropertyRef Name="YemekID" />
+            </Principal>
+            <Dependent Role="TBLSatislar">
+              <PropertyRef Name="Urun" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLYemekler_TBLKategoriler">
+          <End Role="TBLKategoriler" Type="Self.TBLKategoriler" Multiplicity="0..1" />
+          <End Role="TBLYemekler" Type="Self.TBLYemekler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLKategoriler">
+              <PropertyRef Name="KategoriId" />
+            </Principal>
+            <Dependent Role="TBLYemekler">
+              <PropertyRef Name="YemekKategori" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="YemekSepetiDBModelStoreContainer">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLKategoriler" EntityType="Self.TBLKategoriler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLKullanicilar" EntityType="Self.TBLKullanicilar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLMusteriler" EntityType="Self.TBLMusteriler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLSatislar" EntityType="Self.TBLSatislar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLYemekler" EntityType="Self.TBLYemekler" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_TBLSatislar_TBLMusteriler" Association="Self.FK_TBLSatislar_TBLMusteriler">
+            <End Role="TBLMusteriler" EntitySet="TBLMusteriler" />
+            <End Role="TBLSatislar" EntitySet="TBLSatislar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLSatislar_TBLYemekler" Association="Self.FK_TBLSatislar_TBLYemekler">
+            <End Role="TBLYemekler" EntitySet="TBLYemekler" />
+            <End Role="TBLSatislar" EntitySet="TBLSatislar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLYemekler_TBLKategoriler" Association="Self.FK_TBLYemekler_TBLKategoriler">
+            <End Role="TBLKategoriler" EntitySet="TBLKategoriler" />
+            <End Role="TBLYemekler" EntitySet="TBLYemekler" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="YemekSepetiDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TBLKategoriler">
+          <Key>
+            <PropertyRef Name="KategoriId" />
+          </Key>
+          <Property Name="KategoriId" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KategoriAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TBLYemekler" Relationship="Self.FK_TBLYemekler_TBLKategoriler" FromRole="TBLKategoriler" ToRole="TBLYemekler" />
+        </EntityType>
+        <EntityType Name="TBLMusteriler">
+          <Key>
+            <PropertyRef Name="MusteriId" />
+          </Key>
+          <Property Name="MusteriId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MusteriAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MusteriSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TBLSatislar" Relationship="Self.FK_TBLSatislar_TBLMusteriler" FromRole="TBLMusteriler" ToRole="TBLSatislar" />
+        </EntityType>
+        <EntityType Name="TBLSatislar">
+          <Key>
+            <PropertyRef Name="SatisId" />
+          </Key>
+          <Property Name="SatisId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Urun" Type="Int32" />
+          <Property Name="Musteri" Type="Int32" />
+          <Property Name="Adet" Type="Byte" />
+          <Property Name="Fiyat" Type="Decimal" Precision="18" Scale="2" />
+          <NavigationProperty Name="TBLMusteriler" Relationship="Self.FK_TBLSatislar_TBLMusteriler" FromRole="TBLSatislar" ToRole="TBLMusteriler" />
+          <NavigationProperty Name="TBLYemekler" Relationship="Self.FK_TBLSatislar_TBLYemekler" FromRole="TBLSatislar" ToRole="TBLYemekler" />
+        </EntityType>
+        <EntityType Name="TBLYemekler">
+          <Key>
+            <PropertyRef Name="YemekID" />
+          </Key>
+          <Property Name="YemekID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="YemekAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="YemekKategori" Type="Int16" />
+          <Property Name="YemekFiyat" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Stok" Type="Byte" />
+          <NavigationProperty Name="TBLKategoriler" Relationship="Self.FK_TBLYemekler_TBLKategoriler" FromRole="TBLYemekler" ToRole="TBLKategoriler" />
+          <NavigationProperty Name="TBLSatislar" Relationship="Self.FK_TBLSatislar_TBLYemekler" FromRole="TBLYemekler" ToRole="TBLSatislar" />
+          <Property Name="ImageURL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_TBLYemekler_TBLKategoriler">
+          <End Role="TBLKategoriler" Type="Self.TBLKategoriler" Multiplicity="0..1" />
+          <End Role="TBLYemekler" Type="Self.TBLYemekler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLKategoriler">
+              <PropertyRef Name="KategoriId" />
+            </Principal>
+            <Dependent Role="TBLYemekler">
+              <PropertyRef Name="YemekKategori" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLSatislar_TBLMusteriler">
+          <End Role="TBLMusteriler" Type="Self.TBLMusteriler" Multiplicity="0..1" />
+          <End Role="TBLSatislar" Type="Self.TBLSatislar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLMusteriler">
+              <PropertyRef Name="MusteriId" />
+            </Principal>
+            <Dependent Role="TBLSatislar">
+              <PropertyRef Name="Musteri" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TBLSatislar_TBLYemekler">
+          <End Role="TBLYemekler" Type="Self.TBLYemekler" Multiplicity="0..1" />
+          <End Role="TBLSatislar" Type="Self.TBLSatislar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TBLYemekler">
+              <PropertyRef Name="YemekID" />
+            </Principal>
+            <Dependent Role="TBLSatislar">
+              <PropertyRef Name="Urun" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="YemekSepetiDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="TBLKategoriler" EntityType="Self.TBLKategoriler" />
+          <EntitySet Name="TBLMusteriler" EntityType="Self.TBLMusteriler" />
+          <EntitySet Name="TBLSatislar" EntityType="Self.TBLSatislar" />
+          <EntitySet Name="TBLYemekler" EntityType="Self.TBLYemekler" />
+          <AssociationSet Name="FK_TBLYemekler_TBLKategoriler" Association="Self.FK_TBLYemekler_TBLKategoriler">
+            <End Role="TBLKategoriler" EntitySet="TBLKategoriler" />
+            <End Role="TBLYemekler" EntitySet="TBLYemekler" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLSatislar_TBLMusteriler" Association="Self.FK_TBLSatislar_TBLMusteriler">
+            <End Role="TBLMusteriler" EntitySet="TBLMusteriler" />
+            <End Role="TBLSatislar" EntitySet="TBLSatislar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TBLSatislar_TBLYemekler" Association="Self.FK_TBLSatislar_TBLYemekler">
+            <End Role="TBLYemekler" EntitySet="TBLYemekler" />
+            <End Role="TBLSatislar" EntitySet="TBLSatislar" />
+          </AssociationSet>
+          <EntitySet Name="TBLKullanicilar" EntityType="YemekSepetiDBModel.TBLKullanicilar" />
+        </EntityContainer>
+        <EntityType Name="TBLKullanicilar">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Rol" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="YemekSepetiDBModelStoreContainer" CdmEntityContainer="YemekSepetiDBEntities">
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="YemekSepetiDBModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLKategoriler">
+            <EntityTypeMapping TypeName="YemekSepetiDBModel.TBLKategoriler">
+              <MappingFragment StoreEntitySet="TBLKategoriler">
+                <ScalarProperty Name="KategoriId" ColumnName="KategoriId" />
+                <ScalarProperty Name="KategoriAdi" ColumnName="KategoriAdi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLMusteriler">
+            <EntityTypeMapping TypeName="YemekSepetiDBModel.TBLMusteriler">
+              <MappingFragment StoreEntitySet="TBLMusteriler">
+                <ScalarProperty Name="MusteriId" ColumnName="MusteriId" />
+                <ScalarProperty Name="MusteriAdi" ColumnName="MusteriAdi" />
+                <ScalarProperty Name="MusteriSoyad" ColumnName="MusteriSoyad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLSatislar">
+            <EntityTypeMapping TypeName="YemekSepetiDBModel.TBLSatislar">
+              <MappingFragment StoreEntitySet="TBLSatislar">
+                <ScalarProperty Name="SatisId" ColumnName="SatisId" />
+                <ScalarProperty Name="Urun" ColumnName="Urun" />
+                <ScalarProperty Name="Musteri" ColumnName="Musteri" />
+                <ScalarProperty Name="Adet" ColumnName="Adet" />
+                <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLYemekler">
+            <EntityTypeMapping TypeName="YemekSepetiDBModel.TBLYemekler">
+              <MappingFragment StoreEntitySet="TBLYemekler">
+                <ScalarProperty Name="ImageURL" ColumnName="ImageURL" />
+                <ScalarProperty Name="YemekID" ColumnName="YemekID" />
+                <ScalarProperty Name="YemekAdi" ColumnName="YemekAdi" />
+                <ScalarProperty Name="YemekKategori" ColumnName="YemekKategori" />
+                <ScalarProperty Name="YemekFiyat" ColumnName="YemekFiyat" />
+                <ScalarProperty Name="Stok" ColumnName="Stok" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLKullanicilar">
+            <EntityTypeMapping TypeName="YemekSepetiDBModel.TBLKullanicilar">
+              <MappingFragment StoreEntitySet="TBLKullanicilar">
+                <ScalarProperty Name="Rol" ColumnName="Rol" />
+                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+                <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

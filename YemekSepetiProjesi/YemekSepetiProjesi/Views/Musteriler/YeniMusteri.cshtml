@@ -1,0 +1,25 @@
+﻿@model YemekSepetiProjesi.Models.Entity.TBLMusteriler
+@{
+    ViewBag.Title = "YeniMusteri";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+    <form method="post" class="form-group" style="width:80%; margin:auto; margin-top:100px">
+        <div>
+            <label>Müşteri Adı</label>
+            @Html.TextBoxFor(m => m.MusteriAdi, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.MusteriAdi, "", new { @style = "color:red" })
+            <br /><br />
+            <label>Müşteri Soyadı</label>
+            @Html.TextBoxFor(m => m.MusteriSoyad, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.MusteriSoyad, "", new { @style = "color:red" })
+        </div>
+        <div style="margin-top:15px">
+            <button class="btn btn-success">Yeni Müşteri Ekle</button>
+        </div>
+        
+    </form>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+

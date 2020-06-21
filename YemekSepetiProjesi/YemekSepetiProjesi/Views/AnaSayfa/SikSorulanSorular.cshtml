@@ -1,0 +1,143 @@
+﻿
+@{
+    ViewBag.Title = "SikSorulanSorular";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap E-commerce Templates</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <!--[if ie]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
+    <!-- bootstrap -->
+    <link href="~/homepage-css/asd/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/homepage-css/asd/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+    <link href="~/homepage-css/asd/themes/css/bootstrappage.css" rel="stylesheet" />
+
+    <!-- global styles -->
+    <link href="~/homepage-css/asd/themes/css/flexslider.css" rel="stylesheet" />
+    <link href="~/homepage-css/asd/themes/css/main.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- scripts -->
+    <script src="~/homepage-css/asd/themes/js/jquery-1.7.2.min.js"></script>
+    <script src="~/homepage-css/asd/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/homepage-css/asd/themes/js/superfish.js"></script>
+    <script src="~/homepage-css/asd/themes/js/jquery.scrolltotop.js"></script>
+    <style>
+        a:hover {
+            text-decoration: none;
+            color: #ff6a00;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/AnaSayfa/Index"><img src="~/Images/yemeklogo.png" style="margin-bottom:-30px;" class="center" /></a>
+    <div id="top-bar" class="container">
+        <div class="row">
+            <div class="center">
+                <ul class="user-menu">
+                    <li><a href="~/AnaSayfa/Index/">Anasayfa</a></li>
+                    <li><a href="~/AnaSayfa/SikSorulanSorular/">S.S.S</a></li>
+                    <li><a href="~/AnaSayfa/Iletisim/">İletişim</a></li>
+                    <li><a href="~/AnaSayfa/KullaniciSozlesmesi/">Kullanıcı Sözleşmesi</a></li>
+                    <li><a><b> @User.Identity.Name </b></a></li>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li><a href="/Dashboard/Index/">Admin Paneli</a></li>
+                    }
+                    <li><a href="/Login/Logout/">Çıkış Yap</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section class="py-5">
+
+    </section>
+    <div id="wrapper" class="container" style="margin-top:-40px">
+        <section class="main-content">
+            <div class="active item" style="margin-left:75px;margin-top:50px;padding:30px">
+                <div style="text-align:center;font-weight:bold"><h4>Sık Sorulan Sorular</h4></div>
+            </div>
+
+            <div style="margin:40px">
+                <span><b>Nasıl sipariş verebilirim?</b></span><p></p>
+                <span style="padding:40px">
+                    Bulunduğunuz semti seçtikten sonra listelenen restoranlar arasından damak tadınıza uygun olanı bulabilir ve dilediğiniz yemekleri sepete atabilirsiniz. Adresinizi ve ödeme şeklinizi seçtikten sonra siparişinizi tamamlayabilirsiniz. Hepsi bu kadar basit.
+                </span>
+            </div>
+            <div style="margin:40px">
+                <span><b>Siparişimin sizin elinize ulaşıp ulaşmadığını nasıl öğrenebilirim?</b></span><p></p>
+                <span style="padding:40px">
+                    Siz sipariş verme işleminizi tamamladığınızda, bizim sunucumuz siparişinizin bize ulaştığını size söyleyecektir. Bu aşamada siparişi ilgili restorana ulaştırmak tamamıyla bizim görevimiz, araya insan faktörünü de koymadığımız için siparişinizin en küçük detayları bile atlanmayacaktır. Restoran tarafından onaylanan siparişinizin onayı hemen bir e-posta ile size bildirilecektir. (Ama zaten bu e-posta sadece sizi bilgilendirmek amacıyla gönderiliyor.) Eğer Acı Kebap'ta acılı ezme biterse biz zaten hemen sitedeki Acı Kebap'ın menüsüne gidip acılı ezmeye "bu günlük bitmiştir" ibaresini koyuyoruz; ama yine de olası herhangi bir problemde size telefon veya e-posta ile ulaşmaya çalışacağız. O yüzden lütfen o anda bulunduğunuz telefon numarasını da bize verin, bir sorun olduğunda sizle irtibat kurabilelim.
+                </span>
+            </div>
+            <div style="margin:40px">
+                <span><b>Siparişim restorana nasıl ve ne zaman ulaşıyor?</b></span><p></p>
+                <span style="padding:40px">
+                    Bizim web sitemiz üzerinden verdiğiniz sipariş, bizim kendi üzerimizde çalışan yazılımı uyarıp gerekli yerlere gerekli parametrelerle tüm sipariş bilgisini yolluyor. Siz butona bastıktan en geç 60 saniye içinde siparişiniz sandviçinizdeki domatesten, cheesecake´inizin üzerindeki sosa kadar tüm detaylarıyla birlikte ilgili restoranın eline geçiyor. Bizim için siparişin geliş süresi ve detayları çok önemli çünkü biliyoruz ki yemeğiniz ne kadar çabuk gelirse o kadar memnun olacaksınız.
+                </span>
+            </div>
+            <div style="margin:40px">
+                <span><b>Ama ben kredi kartımı vermek istemiyorum?</b></span><p></p>
+                <span style="padding:40px">
+                    Kredi kartınızın numarası bizi hiç mi hiç ilgilendirmiyor. Kesinlikle yemeğinizi aldıktan sonra ücreti tercihinize göre nakit, kredi kartı veya yemek çekleriyle* ödüyorsunuz, aynı telefonla verilen siparişlerde olduğu gibi. Bizce İnternetten alışveriş demek kredi kartı demek değil, rahatça siparişinizi verebilirsiniz. Siz kendinize kolaylık olsun diye kredi kartı kabul eden restoranlardan kredi kartı ile ödeme yapmak istemediğiniz sürece, Yemeksepeti asla kredi kartı numaranızı merak etmeyecektir.
+                </span>
+            </div>
+            <div style="margin:40px">
+                <span><b>Neden kayıt olmam gerekiyor?</b></span><p></p>
+                <span style="padding:40px">
+                    Kayıt olmanın birçok yararı var. Birincisi, sizin e-posta adresinize ve telefon numaranıza ihtiyacımız var ki, herhangi bir olağanüstü durumda size kaşarlı tostun kalmadığını bildirebilelim. İkincisi, açık adresinizi ve adres tarifinizi sadece bir kere kayıt olurken verdiğinizde her sipariş için tekrar tekrar bu bilgileri girmenize gerek kalmayacaktır.
+                </span>
+            </div>
+            <div style="margin:40px">
+                <span><b>Yemeksepeti hangi saatler arası açık?</b></span><p></p>
+                <span style="padding:40px">
+                    Yemeksepeti, ´Her insanın her an acıkmaya hakkı vardır.´ prensibinden yola çıkarak, portföyündeki restoranların açık olma saatleri çerçevesinde tüm kullanıcılarına hizmet vermektedir. Hangi restoranın, hangi gün ve hangi saatler arasında açık olduğu bilgisini de restoran sayfalarında bulabilirsiniz.
+                </span>
+            </div>
+            <div style="margin:40px">
+                <span><b>Verdiğim bir siparişi nasıl iptal edebilirim?</b></span><p></p>
+                <span style="padding:40px">
+                    Verdiğiniz siparişi iptal etmek için sipariş onay sayfasından ya da ana sayfadan Canlı Yardım butonunu kullanarak bize ulaşabilir ya da 444 5 445 numaralı Yemeksepeti Kullanıcı Destek Hattı'ndan yardım alabilirsiniz.
+                </span>
+            </div>
+        </section>
+        <section id="copyright">
+            <span>Erkan Eroğlu 18701804 - Tüm hakları saklıdır.</span>
+        </section>
+    </div>
+    <script src="~/homepage-css/asd/themes/js/common.js"></script>
+    <script src="~/homepage-css/asd/themes/js/jquery.flexslider-min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(document).ready(function () {
+                $('.flexslider').flexslider({
+                    animation: "fade",
+                    slideshowSpeed: 4000,
+                    animationSpeed: 600,
+                    controlNav: false,
+                    directionNav: true,
+                    controlsContainer: ".flex-container" // the container that holds the flexslider
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

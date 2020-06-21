@@ -1,0 +1,129 @@
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\YemekSepetiProjesi.dll.config
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\YemekSepetiProjesi.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\YemekSepetiProjesi.pdb
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Antlr3.Runtime.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\EntityFramework.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\EntityFramework.SqlServer.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.Google.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Web.Infrastructure.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Newtonsoft.Json.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Owin.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.Helpers.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.Mvc.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.Optimization.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.Razor.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.WebPages.Deployment.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.WebPages.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.WebPages.Razor.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\WebGrease.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.Helpers.xml
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.Mvc.xml
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.Optimization.xml
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.Razor.xml
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.WebPages.xml
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.WebPages.Deployment.xml
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.WebPages.Razor.xml
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Newtonsoft.Json.xml
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Antlr3.Runtime.pdb
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\EntityFramework.xml
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\EntityFramework.SqlServer.xml
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.xml
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.xml
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.Google.xml
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\obj\Debug\YemekSepetiProjesi.csprojResolveAssemblyReference.cache
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\obj\Debug\YemekSepetiProjesi.dll
+c:\users\yunusemre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\obj\Debug\YemekSepetiProjesi.pdb
+C:\Users\YunusEmre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\PagedList.dll
+C:\Users\YunusEmre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\PagedList.Mvc.dll
+C:\Users\YunusEmre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\PagedList.xml
+C:\Users\YunusEmre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\PagedList.Mvc.xml
+C:\Users\YunusEmre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Mvc.JQuery.DataTables.Common.dll
+C:\Users\YunusEmre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\Mvc.JQuery.DataTables.dll
+C:\Users\YunusEmre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Linq.Dynamic.Core.dll
+C:\Users\YunusEmre\documents\visual studio 2013\Projects\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Linq.Dynamic.Core.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi - %99.9999999\YemekSepetiProjesi\obj\Debug\YemekSepetiProjesi.csprojResolveAssemblyReference.cache
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi - %99.9999999\YemekSepetiProjesi\obj\Debug\YemekSepetiProjesi.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi - %99.9999999\YemekSepetiProjesi\obj\Debug\YemekSepetiProjesi.pdb
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\YemekSepetiProjesi.dll.config
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\YemekSepetiProjesi.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\YemekSepetiProjesi.pdb
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Antlr3.Runtime.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\EntityFramework.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\EntityFramework.SqlServer.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Mvc.JQuery.DataTables.Common.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Mvc.JQuery.DataTables.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Newtonsoft.Json.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Owin.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\PagedList.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\PagedList.Mvc.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Linq.Dynamic.Core.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.Helpers.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.Mvc.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.Optimization.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.Razor.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.WebPages.Deployment.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.WebPages.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.WebPages.Razor.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\WebGrease.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\EntityFramework.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\EntityFramework.SqlServer.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Newtonsoft.Json.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\PagedList.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\PagedList.Mvc.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Linq.Dynamic.Core.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.Helpers.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.Mvc.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.Razor.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.WebPages.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.WebPages.Deployment.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.WebPages.Razor.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\System.Web.Optimization.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Antlr3.Runtime.pdb
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\obj\Debug\YemekSepetiProjesi.csprojResolveAssemblyReference.cache
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\obj\Debug\YemekSepetiProjesi.dll
+C:\Users\YunusEmre\Desktop\YemekSepetiProjesi\YemekSepetiProjesi\obj\Debug\YemekSepetiProjesi.pdb

@@ -1,0 +1,55 @@
+﻿@using YemekSepetiProjesi.Models.Entity
+@model List<TBLSatislar>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<style>
+    th, th, tr, table, td, tbody {
+        text-align: center;
+    }
+</style>
+    <a href="/Satis/Index" class="btn btn-success" style="margin-top:15px;margin-bottom:40px;margin-left:20px">Satış Yap</a>
+
+    <table id="satisTablo" class="table table-bordered" style="text-align:center;margin-top:30px">
+        <thead>
+            <tr>
+                <th> Satış ID</th>
+                <th> Yemek Adı</th>
+                <th> Müşteri Adı</th>
+                <th> Adet</th>
+                <th> Toplam tutar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var urunler in Model)
+            {
+                var adet = urunler.Adet;
+                var fiyat = urunler.TBLYemekler.YemekFiyat;
+                var tutar = adet * fiyat;
+                <tr>
+                    <th>@urunler.SatisId</th>
+                    <td>@urunler.TBLYemekler.YemekAdi</td>
+                    <td>@urunler.TBLMusteriler.MusteriAdi @urunler.TBLMusteriler.MusteriSoyad</td>
+                    <td>@urunler.Adet</td>
+                    <td>@tutar ₺</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+    <link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+
+    <script>
+        $('#satisTablo').dataTable({});
+    </script>
+    <link href="~/Content/DataTables/css/dataTables.bootstrap4.css" rel="stylesheet" />
+
+

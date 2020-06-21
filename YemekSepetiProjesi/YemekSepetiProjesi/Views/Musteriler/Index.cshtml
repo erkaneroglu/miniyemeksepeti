@@ -1,0 +1,62 @@
+﻿@using YemekSepetiProjesi.Models.Entity
+@model List<TBLMusteriler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<style>
+    .tr, td, th {
+        text-align: center;
+    }
+
+    body {
+        padding: 30px;
+    }
+</style>
+
+    <a href="/musteriler/YeniMusteri" class="btn btn-success" style="margin-bottom:50px">Yeni Müşteri Ekle</a>
+<table id="musteriTablo" class="table table-bordered" style="text-align:center;margin-top:20px;">
+    <thead>
+        <tr>
+            <th>Müşteri ID</th>
+            <th>Müşteri Adı</th>
+            <th>Müşteri Soyadı</th>
+            <th>SİL</th>
+            <th>GÜNCELLE</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var msteri in Model)
+        {
+            <tr>
+                <th>
+                    @msteri.MusteriId
+                </th>
+                <td>
+                    @msteri.MusteriAdi
+                </td>
+                <td>
+                    @msteri.MusteriSoyad
+                </td>
+                @*<td><a href="/musteriler/Sil/@msteri.MusteriId" class="btn btn-danger">Sil</a></td>*@
+                <td>@Html.ActionLink("Sil", "Sil", new { id = msteri.MusteriId }, new { @class = "btn btn-danger", onlick = "return confirm('Gercekten silmek istiyor musun?')" })</td>
+                <td><a href="/musteriler/MusteriGetir/@msteri.MusteriId" class="btn btn-success">Güncelle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+
+<script>
+    $('#musteriTablo').dataTable({});
+</script>
